@@ -1,0 +1,24 @@
+{
+  "workbench.colorTheme": "Nord",
+  "editor.fontFamily": "'GeistMono Nerd Font', 'monospace', monospace",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.minimap.renderCharacters": false,
+  "terminal.integrated.fontFamily": "'Geist Mono'",
+  "terminal.integrated.fontSize": 14,
+  "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "relative",
+  "editor.formatOnSave": true,
+  "files.autoSave": "off",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "editor.minimap.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  "workbench.startupEditor": "none",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.activityBar.location": "top"
+}

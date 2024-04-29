@@ -1,0 +1,194 @@
+[
+  // split window
+  {
+    "key": "space h",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && !terminalFocus && neovim.mode == 'normal'",
+    "args": "<c-w>s"
+  },
+  {
+    "key": "space v",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && !terminalFocus && neovim.mode == 'normal'",
+    "args": "<c-w>v"
+  },
+
+  //turn to  other windows
+  {
+    "key": "ctrl+j",
+    "command": "vscode-neovim.send",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
+    "args": "<c-j>"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "vscode-neovim.send",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
+    "args": "<c-k>"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "vscode-neovim.send",
+    "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
+    "args": "<c-l>"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "vscode-neovim.send",
+    "when": "!editortextfocus && !terminalfocus && neovim.mode != 'cmdline'",
+    "args": "<c-h>"
+  },
+
+  // resize window
+  {
+    "key": "ctrl+up",
+    "command": "vscode-neovim.send",
+    "when": "!editortextfocus && !terminalfocus && neovim.mode == 'normal'",
+    "args": "<c-up>"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "vscode-neovim.send",
+    "when": "!editortextfocus && !terminalfocus && neovim.mode == 'normal'",
+    "args": "<c-down>"
+  },
+  {
+    "key": "ctrl+left",
+    "command": "vscode-neovim.send",
+    "when": "!editortextfocus && !terminalfocus && neovim.mode == 'normal'",
+    "args": "<c-left>"
+  },
+  {
+    "key": "ctrl+right",
+    "command": "vscode-neovim.send",
+    "when": "!editortextfocus && !terminalfocus && neovim.mode == 'normal'",
+    "args": "<c-right>"
+  },
+  //line down and line up
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  //comment use gcc to comment one line or use 2 gcc comment two line 3 gcc comment three line
+
+  // format
+  {
+    "key": "space l f",
+    "command": "prettier.forceFormatDocument",
+    "when": "editorTextFocus && !editorReadonly && neovim.mode=='normal' "
+  },
+  // close buffer left
+  {
+    "key": "space b l",
+    "command": "workbench.action.closeEditorsToTheLeft",
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && neovim.mode == 'normal'"
+  },
+
+  {
+    "key": "space b r",
+    "command": "workbench.action.closeEditorsToTheRight",
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && neovim.mode == 'normal'"
+  },
+  //next buffer
+  {
+    "key": "] b",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && neovim.mode == 'normal'",
+    "args": "gt"
+  },
+  //previous buffer
+  {
+    "key": "[ b",
+    "command": "vscode-neovim.send",
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && neovim.mode == 'normal'",
+    "args": "gT"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+    "args": "<c-p>"
+  },
+
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+    "args": "<c-n>"
+  },
+
+  //toggle terminal
+  {
+    "key": "f7",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active && neovim.mode=='normal'"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  //new terminal
+  {
+    "key": "f12",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile && neovim.mode=='normal'"
+  },
+  {
+    "key": "ctrl+shift+5",
+    "command": "-workbench.action.terminal.split",
+    "when": "terminalFocus && terminalProcessSupported || terminalFocus && terminalWebExtensionContributedProfile"
+  },
+  // turn to next terminal
+  {
+    "key": "alt+f7",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported && neovim.mode=='normal'"
+  },
+  {
+    "key": "alt+down",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  // close current terminal
+  {
+    "key": "alt+f12",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported && neovim.mode=='normal'"
+  },
+  // find files
+  {
+    "key": "space f f",
+    "command": "vscode-neovim.send",
+    "when": "neovim.mode=='normal' && editorTextFocus",
+    "args": ":ex<cr>"
+  },
+  // toggle sidebar
+  {
+    "key": "space e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "neovim.mode=='normal'  && !terminalFocus && (editorTextFocus || filesExplorerFocus || sideBySideEditorActive)"
+  },
+  // find text
+  {
+    "key": "space f w",
+    "command": "workbench.action.experimental.quickTextSearch",
+    "when": "neovim.mode=='normal' && editorTextFocus && !terminalFocus"
+  }
+]
