@@ -1,4 +1,5 @@
 {
+  "window.titleBarStyle": "native",
   "workbench.colorTheme": "Nord",
   "editor.fontFamily": "'GeistMono Nerd Font', 'monospace', monospace",
   "editor.fontSize": 16,
@@ -10,15 +11,15 @@
   "editor.lineNumbers": "relative",
   "editor.formatOnSave": true,
   "files.autoSave": "off",
-
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.linux": "/home/fukuda/Documents/nvim-linux64/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/fukuda/.config/nvim/init.lua",
   "editor.minimap.enabled": false,
   "window.menuBarVisibility": "toggle",
   "workbench.startupEditor": "none",
-  "window.customTitleBarVisibility": "auto",
-  "workbench.activityBar.location": "top"
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "auto"
 }

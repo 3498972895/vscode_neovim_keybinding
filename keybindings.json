@@ -18,17 +18,19 @@
     "key": "ctrl+j",
     "command": "vscode-neovim.send",
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
-    "args": "<c-j>"
+    "args": "<c-h>"
   },
   {
     "key": "ctrl+k",
     "command": "vscode-neovim.send",
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
+
     "args": "<c-k>"
   },
   {
     "key": "ctrl+l",
     "command": "vscode-neovim.send",
+
     "when": "!editorTextFocus && !terminalFocus && neovim.mode != 'cmdline'",
     "args": "<c-l>"
   },
