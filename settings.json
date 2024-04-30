@@ -1,5 +1,5 @@
 {
-  "window.titleBarStyle": "native",
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "Nord",
   "editor.fontFamily": "'GeistMono Nerd Font', 'monospace', monospace",
   "editor.fontSize": 16,
@@ -12,14 +12,21 @@
   "editor.formatOnSave": true,
   "files.autoSave": "off",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
+    "vscodevim.vim": 1
   },
-  "vscode-neovim.neovimExecutablePaths.linux": "/home/fukuda/Documents/nvim-linux64/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.linux": "/home/fukuda/.config/nvim/init.lua",
   "editor.minimap.enabled": false,
-  "window.menuBarVisibility": "toggle",
   "workbench.startupEditor": "none",
+  "window.customTitleBarVisibility": "auto",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.linkedEditing": true,
   "workbench.activityBar.location": "top",
-  "window.customTitleBarVisibility": "auto"
+  "workbench.editor.enablePreview": false,
+  "vim.cursorStylePerMode.insert": "line",
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.useSystemClipboard": true,
+  "workbench.editor.editorActionsLocation": "hidden",
+  "window.menuBarVisibility": "compact",
+  "window.commandCenter": false
 }
