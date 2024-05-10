@@ -1,0 +1,6 @@
+{
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.useSystemClipboard": true
+}

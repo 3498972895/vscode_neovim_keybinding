@@ -1,25 +1,27 @@
 [
-  //the default key for lsp, gd go to definition, gh hover show simple method signture.
-
-  //move lines right
-  {
-    "key": "alt+right",
-    "command": "vim.remap",
-    "when": "vim.mode == 'normal' || vim.mode=='visual'",
-    "args": {
-      "after": [">", ">"]
-    }
-  },
+  //the default shortcuts for lsp are, gd go to definition, gh hover show simple method signture.
   // split window
   {
     "key": "space h",
-    "command": "workbench.action.splitEditorDown",
-    "when": "editorTextFocus && !terminalFocus && vim.mode == 'Normal'"
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.splitEditorDown",
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus  && vim.mode == 'Normal'"
   },
   {
     "key": "space v",
-    "command": "workbench.action.splitEditor",
-    "when": "editorTextFocus && !terminalFocus && vim.mode == 'Normal'"
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.splitEditor",
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus  && vim.mode == 'Normal'"
   },
 
   //turn to  other windows
@@ -66,7 +68,8 @@
     "command": "workbench.action.increaseViewWidth",
     "when": "!editortextfocus && !terminalfocus && vim.mode == 'Normal'"
   },
-  //line down and line up
+
+  //moveline down and line up
   {
     "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
@@ -128,7 +131,7 @@
     "when": "editorTextFocus && !filesExplorerFocus && !searchViewletFocus && vim.mode == 'Normal'"
   },
 
-  //move pre suggestion
+  //move prev suggestion
   {
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
@@ -152,7 +155,7 @@
     "command": "-workbench.action.terminal.toggleTerminal",
     "when": "terminal.active"
   },
-  //new terminal
+  //new terminal with split way
   {
     "key": "f12",
     "command": "workbench.action.terminal.split",
@@ -199,19 +202,21 @@
     "when": "vim.mode=='Normal' && editorTextFocus && !terminalFocus"
   },
 
+  //file explorer settings operation on fileExplior use default vscode focus explorer ctrl+shift+e, and ctrl+shift+x focus extions
+
   //del file
   {
     "key": "d",
     "command": "deleteFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  //renamefile
+  //rename file
   {
     "key": "r",
     "command": "renameFile",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-  //new file or folder
+  //new file or folder: you can new file with name with it's extension name, or new folder by add '/' slash in the end of file name.
   {
     "key": "a",
     "command": "explorer.newFile",
@@ -233,5 +238,17 @@
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+  },
+  //code action selct
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible && !textInputFocus"
+  },
+
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible && !textInputFocus"
   }
 ]
