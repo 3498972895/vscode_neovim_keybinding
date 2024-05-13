@@ -198,7 +198,7 @@
   // find text
   {
     "key": "space f w",
-    "command": "workbench.action.experimental.quickTextSearch",
+    "command": "workbench.action.quickTextSearch",
     "when": "vim.mode=='Normal' && editorTextFocus && !terminalFocus"
   },
 
